@@ -1,3 +1,7 @@
+#!/bin/bash
+
+PSQL="psql -X --username=freecodecamp --dbname=bikes --tuples-only -c"
+
 if [[ $1 ]]
 then
   # if input is not a number

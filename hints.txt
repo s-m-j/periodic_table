@@ -1,0 +1,9 @@
+округление полей в таблице (зачем непонятно)
+
+We should set another type from numeric(9,6) to decimal:
+ALTER TABLE properties ALTER COLUMN atomic_mass TYPE DECIMAL;
+
+trim the values:
+UPDATE properties SET atomic_mass=trim(trailing '00' FROM atomic_mass::TEXT)::DECIMAL;
+
+подключение надо исправить
